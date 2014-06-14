@@ -9,3 +9,10 @@
 //= require ./router
 //= require_tree ./routes
 //= require_self
+
+Ember.$(function() {
+  var token = $('meta[name="csrf-token"]').attr('content');
+  Ember.$.ajaxPrefilter(function(options, originalOptions, xhr) {
+    xhr.setRequestHeader('X-CSRF-Token', token);
+  });
+});
