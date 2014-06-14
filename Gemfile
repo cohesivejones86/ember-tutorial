@@ -24,3 +24,4 @@ gem 'ember-rails'
 gem 'ember-source'
 gem 'emblem-rails'
 
+gem 'ffaker'
